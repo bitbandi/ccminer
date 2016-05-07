@@ -562,7 +562,7 @@ extern "C" int scanhash_hmq(int thr_id, struct work* work, uint32_t max_nonce, u
 			foundNonce = cuda_check_hash(thr_id, throughput, pdata[19], d_hash[thr_id]);
 		}
 
-		*hashes_done = pdata[19] - first_nonce + throughput;
+		*hashes_done = pdata[19] - first_nonce + (throughput / 4);
 
 		if (foundNonce != UINT32_MAX)
 		{
