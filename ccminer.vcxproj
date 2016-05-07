@@ -257,6 +257,8 @@
       <MaxRegCount>76</MaxRegCount>
     </CudaCompile>
     <CudaCompile Include="neoscrypt\cuda_neoscrypt.cu" />
+    <CudaCompile Include="hmq\cuda_hmq_compactionTest.cu" />
+    <CudaCompile Include="hmq\hmq.cu" />
     <ClCompile Include="scrypt-jane.cpp" />
     <ClCompile Include="scrypt.cpp" />
     <ClCompile Include="skein2.cpp" />

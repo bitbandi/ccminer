@@ -371,6 +371,15 @@ void x17_haval256_gpu_hash_64(uint32_t threads, uint32_t startNounce, uint64_t *
 		hash.h4[6]=s6;
 		hash.h4[7]=s7;
 
+		hash.h4[8] = 0x00000000;
+		hash.h4[9] = 0x00000000;
+		hash.h4[10] = 0x00000000;
+		hash.h4[11] = 0x00000000;
+		hash.h4[12] = 0x00000000;
+		hash.h4[13] = 0x00000000;
+		hash.h4[14] = 0x00000000;
+		hash.h4[15] = 0x00000000;
+
 		#pragma unroll 16
 		for (int u = 0; u < 16; u ++)
 			inpHash[u] = hash.h4[u];

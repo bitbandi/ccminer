@@ -55,6 +55,7 @@ void algo_free_all(int thr_id)
 	free_fugue256(thr_id);
 	free_groestlcoin(thr_id);
 	free_heavy(thr_id);
+	free_hmq(thr_id);
 	free_jackpot(thr_id);
 	free_luffa(thr_id);
 	free_lyra2(thr_id);

@@ -1943,6 +1943,9 @@ void print_hash_tests(void)
 	heavycoin_hash(&hash[0], &buf[0], 32);
 	printpfx("heavy", hash);
 
+	hmqhash(&hash[0], &buf[0]);
+	printpfx("hmq", hash);
+
 	jackpothash(&hash[0], &buf[0]);
 	printpfx("jackpot", hash);
 

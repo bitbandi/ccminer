@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <memory.h>
 
-#undef WANT_BMW512_80
+#define WANT_BMW512_80
 
 #include "cuda_helper.h"
 

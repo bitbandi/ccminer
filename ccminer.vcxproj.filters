@@ -82,6 +82,9 @@
     <Filter Include="Source Files\CUDA\lyra2">
       <UniqueIdentifier>{1613763f-895c-4321-b58b-6f5849868956}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\CUDA\hmq">
+      <UniqueIdentifier>{cda6092a-6608-44e0-a419-16ad398f3852}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="compat\jansson\dump.c">
@@ -708,6 +711,12 @@
     </CudaCompile>
     <CudaCompile Include="lyra2\lyra2REv2.cu">
       <Filter>Source Files\CUDA\lyra2</Filter>
+    </CudaCompile>
+    <CudaCompile Include="hmq\hmq.cu">
+      <Filter>Source Files\CUDA\hmq</Filter>
+    </CudaCompile>
+    <CudaCompile Include="hmq\cuda_hmq_compactionTest.cu">
+      <Filter>Source Files\CUDA\hmq</Filter>
     </CudaCompile>
     <CudaCompile Include="Algo256\blake2s.cu">
       <Filter>Source Files\CUDA\Algo256</Filter>

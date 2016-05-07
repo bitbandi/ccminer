@@ -220,6 +220,7 @@ Options:\n\
 			fugue256    Fuguecoin\n\
 			groestl     Groestlcoin\n\
 			heavy       Heavycoin\n\
+			hmq         Hmq\n\
 			jackpot     Jackpot\n\
 			keccak      Keccak-256 (Maxcoin)\n\
 			luffa       Joincoin\n\
@@ -1463,6 +1464,7 @@ static bool stratum_gen_work(struct stratum_ctx *sctx, struct work *work)
 		case ALGO_NEOSCRYPT:
 		case ALGO_SCRYPT:
 		case ALGO_SCRYPT_JANE:
+		case ALGO_HMQ:
 			work_set_target(work, sctx->job.diff / (65536.0 * opt_difficulty));
 			break;
 		case ALGO_DMD_GR:
@@ -1962,6 +1964,9 @@ static void *miner_thread(void *userdata)
 
 		case ALGO_HEAVY:
 			rc = scanhash_heavy(thr_id, &work, max_nonce, &hashes_done, work.maxvote, HEAVYCOIN_BLKHDR_SZ);
+			break;
+		case ALGO_HMQ:
+			rc = scanhash_hmq(thr_id, &work, max_nonce, &hashes_done);
 			break;
 		case ALGO_MJOLLNIR:
 			rc = scanhash_heavy(thr_id, &work, max_nonce, &hashes_done, 0, MNR_BLKHDR_SZ);
