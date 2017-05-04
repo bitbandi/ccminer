@@ -563,6 +563,9 @@
     <ClInclude Include="crypto\cryptonight.h">
       <Filter>Source Files\CUDA\xmr</Filter>
     </ClInclude>
+    <ClInclude Include="x11\timetravel-permutations.h">
+      <Filter>Header Files\CUDA</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CudaCompile Include="cuda.cpp">
